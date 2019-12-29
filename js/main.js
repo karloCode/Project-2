@@ -49,3 +49,11 @@ overlay.onclick = function() {
 }
 
 
+//*Smoot Scroll
+$('a[href*="#"]').on('click', function(e) {
+  e.preventDefault();
+
+  $('html, body').animate({
+       scrollTop: $($(this).attr('href')).offset().top - 47,
+  }, 500, 'linear')
+});
